@@ -22,15 +22,15 @@ public class MpdemoApplicationTests {
     // 查询trending表所有数据
     @Test
     public void findAll() {
-        List<Trending> trending = trendingMapper.selectList(null);
+        trendingMapper.selectList(null);
     }
 
     // 向trending表添加一条数据
     @Test
     public void addTrending() {
-        Trending trending = trendingMapper.selectById(1307345304936275970L);
-        trending.setId(null);
-        trendingMapper.insert(trending);
+//        Trending trending = trendingMapper.selectById(1307149113942347777L);
+//        trending.setId(null);
+//        trendingMapper.insert(trending);
     }
 
     // 根据id修改trending表中的一条数据
@@ -66,7 +66,7 @@ public class MpdemoApplicationTests {
     // 多个id批量查询
     @Test
     public void testSelectBatchIds() {
-        trendingMapper.selectBatchIds(Arrays.asList(1307146899937161217L, 1307149113942347777L));
+        trendingMapper.selectBatchIds(Arrays.asList(1307149113942347777L, 1307298681342492674L));
     }
 
     // 条件查询
@@ -104,13 +104,13 @@ public class MpdemoApplicationTests {
     // 删除操作 物理删除/逻辑删除（取决于是否加载逻辑删除插件）
     @Test
     public void testDeleteById() {
-        trendingMapper.deleteById(1307345304936275970L);
+//        trendingMapper.deleteById(1307149113942347777L);
     }
 
     // 删除操作 批量删除
     @Test
     public void testDeleteBatchIds() {
-        trendingMapper.deleteBatchIds(Arrays.asList(1307346401977499650L, 1307346634757152769L));
+//        trendingMapper.deleteBatchIds(Arrays.asList(1307346401977499650L, 1307346634757152769L));
     }
 
     // mp实现复杂查询操作
